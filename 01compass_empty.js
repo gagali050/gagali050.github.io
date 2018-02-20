@@ -7,33 +7,63 @@ oriented = function(e) {
         }   else  { 
             compassHeading = 360 - e.alpha;
         }
-        
 
-        if(compassHeading > 315 || compassHeading < 45) {
+        if(compassHeading > 330 || compassHeading < 45) {
+                text_area.textContent = "港区小学校";
 
-         text_area.textContent = "north";
+        }
+
+        if(compassHeading > 45 && compassHeading < 90) {
+                text_area.textContent = "sunset";
+
+        }
+
+        if(compassHeading > 90 && compassHeading < 120) {
+                text_area.textContent = "1-2";
+
+        }
+         
+
+        if(compassHeading > 120 && compassHeading < 135) {
+                text_area.textContent = "お台場海浜公園";
+
+        }
+
+        if(compassHeading > 135 && compassHeading < 180) {
+                text_area.textContent = "park";
+
+        }
+
+        if(compassHeading > 180 && compassHeading < 225) {
+                text_area.textContent = "wars";
+
+        }
+
+        if(compassHeading > 225 && compassHeading < 240) {
+                text_area.textContent = "wharf";
+
+        }
+
+         if(compassHeading > 240 && compassHeading < 270) {
+                text_area.textContent = "sunset";
+
+        }
+
+        if(compassHeading > 270 && compassHeading < 300) {
+                text_area.textContent = "tokyo tower";
+
+        }
+
+        if(compassHeading > 300 && compassHeading < 330) {
+                text_area.textContent = "rainbow bridge";
+
+        }
         //calls function to alter content based on heading
        // myOrientation();
-        }
-
-        if(compassHeading >= 45 && compassHeading < 135 ) {
-            text_area.textContent = "east";
-
-        }
-
-
-        if(compassHeading >= 135 && compassHeading < 225 ) {
-            text_area.textContent = "south";
-            
-        }
-
-        if(compassHeading >= 225 && compassHeading < 315 ) {
-            text_area.textContent = "west"
-
-        }
+    }
 
 //device orientation that can track orientation on space
-	window.addEventListener('deviceorientation', oriented, false);
+    window.addEventListener('deviceorientation', oriented, false);
     
 
 
@@ -45,6 +75,8 @@ var text_area = document.getElementById("compass_content");
      
             text_area.textContent = "empty compass";
         
-	}
+    }
+
+
 
 
